@@ -10,6 +10,10 @@ module TestGuru
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
+    config.time_zone = 'UTC +03:00 (Moscow, St. Petersburg)'
+    Time.zone.now
+
+    language = 'Russian'
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
