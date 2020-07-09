@@ -13,6 +13,17 @@
 # Юзертесты - сгенерировать для них модель
 # rails db:seed
 
+User.create(
+  [
+    { name: 'Bilbo Baggins', email: 'bilbo@bla.com' },
+    { name: 'Morgoth Bauglir', email: 'melkor_the_best@bla.com' },
+    { name: 'Gandalf the Grey', email: 'sauron_sucks@bla.com' },
+    { name: 'Galadriel', email: 'gimli_fck_off@bla.com' },
+    { name: 'Tranduil', email: 'elvish_badass@bla.com' },
+    { name: 'Aragorn', email: 'like_a_boss@bla.com' },
+    { name: 'Arven', email: 'fck_immortality@bla.com' }
+  ]
+)
 
 Category.create(
   [
@@ -26,13 +37,14 @@ Category.create(
 
 Test.create(
   [
-    { title: 'Ruby - beginner', level: 1, category_id: 1 },
-    { title: 'Ruby - advanced', level: 2, category_id: 1 },
-    { title: 'Rails - beginner', level: 2, category_id: 2 },
-    { title: 'Rails - advanced', level: 3, category_id: 2 },
-    { title: 'HTML - beginner', level: 1, category_id: 3 },
-    { title: 'CSS - beginner', level: 1, category_id: 4 },
-    { title: 'JavaScript - beginner', level: 2, category_id: 5 }
+    { title: 'Ruby - beginner', level: 1, category_id: 1, user_id: User.find_by(name: 'Arven').id },
+    { title: 'Ruby - advanced', level: 2, category_id: 1, user_id: User.find_by(name: 'Arven').id },
+    { title: 'Rails - beginner', level: 2, category_id: 2, user_id: User.find_by(name: 'Arven').id },
+    { title: 'Rails - advanced', level: 3, category_id: 2, user_id: User.find_by(name: 'Arven').id },
+    { title: 'HTML - beginner', level: 1, category_id: 3, user_id: User.find_by(name: 'Arven').id },
+    { title: 'CSS - beginner', level: 1, category_id: 4, user_id: User.find_by(name: 'Arven').id },
+    { title: 'JavaScript - beginner', level: 2, category_id: 5, user_id: User.find_by(name: 'Arven').id }
+    # { title: 'JavaScript - beginner', level: 2, category_id: 5, user_id: User.find_by(name: 'Arven').id }
   ]
 )
 
@@ -60,32 +72,15 @@ Answer.create(
   ]
 )
 
-User.create(
+TestsUser.create(
   [
-    { name: 'Bilbo Baggins', email: 'bilbo@bla.com' },
-    { name: 'Morgoth Bauglir', email: 'melkor_the_best@bla.com' },
-    { name: 'Gandalf the Grey', email: 'sauron_sucks@bla.com' },
-    { name: 'Galadriel', email: 'gimli_fck_off@bla.com' },
-    { name: 'Tranduil', email: 'elvish_badass@bla.com' }
-  ]
-)
-
-Status.create(
-  [
-    { stat: 'in progress' },
-    { stat: 'complete' }
-  ]
-)
-
-Usertest.create(
-  [
-    { user_id: 1 , test_id: 1, status_id: 2 },
-    { user_id: 1 , test_id: 5, status_id: 1 },
-    { user_id: 2 , test_id: 2, status_id: 1 },
-    { user_id: 2 , test_id: 3, status_id: 2 },
-    { user_id: 3 , test_id: 4, status_id: 1 },
-    { user_id: 4 , test_id: 7, status_id: 2 },
-    { user_id: 5 , test_id: 6, status_id: 1 },
-    { user_id: 5 , test_id: 1, status_id: 2 }
+    { user_id: 1 , test_id: 1 },
+    { user_id: 1 , test_id: 5 },
+    { user_id: 2 , test_id: 2 },
+    { user_id: 2 , test_id: 3 },
+    { user_id: 3 , test_id: 4 },
+    { user_id: 4 , test_id: 7 },
+    { user_id: 5 , test_id: 6 },
+    { user_id: 5 , test_id: 1 }
   ]
 )
