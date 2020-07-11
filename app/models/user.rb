@@ -10,4 +10,10 @@ class User < ApplicationRecord
   has_many :author_tests, class_name: 'Test'
   has_many :tests_users
   has_many :tests, through: :tests_users
+
+  validates :name, presence: true,
+                   uniqueness: true
+#не нарушается ли тут принцип, что лучше не повторяться?
+  validates :email, presence: true,
+                    uniqueness: true
 end
