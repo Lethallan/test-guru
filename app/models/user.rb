@@ -10,4 +10,6 @@ class User < ApplicationRecord
   has_many :author_tests, class_name: 'Test'
   has_many :tests_users
   has_many :tests, through: :tests_users
+
+  validates :name, :email, presence: true, uniqueness: true
 end
