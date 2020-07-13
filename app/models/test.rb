@@ -50,7 +50,7 @@ class Test < ApplicationRecord
 
   private
 
-  def validate_level
+  def validate_max_level
     errors.add(:level) if level.to_i > 10
   end
 
