@@ -2,7 +2,11 @@ Rails.application.routes.draw do
 
   root 'tests#index'
 
-  resources :tests
+  resources :tests do
+    resources :questions, shallow: true
+  end
+
+  # post 'tests/1/questions/new', to: 'questions#new'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   #_____________________________________________________________________________

@@ -7,8 +7,9 @@ class TestsController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
   def index
-    result = ["Class: #{params.class}", "Parameters: #{params.inspect}"]
-    render plain: result.join("\n")
+    # result = ["Class: #{params.class}", "Parameters: #{params.inspect}"]
+    # render plain: result.join("\n")
+    render html: '<h1>All tests</h1>'.html_safe
   end
 
   def show
@@ -16,15 +17,27 @@ class TestsController < ApplicationController
     render inline: '<%= @test.title %>'
   end
 
+  # def show_questions
+  #   render plain: :test_id.questions.inspect
+  # end
+
   def new
   end
 
+  # http://127.0.0.1:3000/tests/new
   def create
+    new_test = Test.create(test_params)
+    render plain: new_test.inspect
   end
  #_______________________________________________
 
   private
 
+  def test_params
+     params.require(:test).permit(:title, :level)
+  end
+
+  # http://127.0.0.1:3000/tests/1
   def find_test
     @test = Test.find(params[:id])
   end
@@ -44,7 +57,6 @@ class TestsController < ApplicationController
     render plain: 'Test was not found'
   end
 end
-
 
 
 #_______________________________________________
