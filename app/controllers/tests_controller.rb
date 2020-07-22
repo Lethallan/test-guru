@@ -1,5 +1,5 @@
 class TestsController < ApplicationController
-  before_action :find_test, only: %i[show destroy edit]
+  before_action :find_test, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -8,11 +8,17 @@ class TestsController < ApplicationController
   end
 
   def new #GET /tests/new
+    @test = Test.new
   end
 
   def create #POST
-    Test.create(test_params)
-    redirect_to action: :index
+    @test = Test.new(test_params)
+
+    if @test.save
+      redirect_to @test
+    else
+      render :new
+    end
   end
 
   def show #GET /tests/:id
@@ -22,6 +28,11 @@ class TestsController < ApplicationController
   end
 
   def update #PATCH
+    if @test.update(test_params)
+      redirect_to @test
+    else
+      render :edit
+    end
   end
 
   def destroy #DELETE /tests/:id
@@ -31,7 +42,7 @@ class TestsController < ApplicationController
   private
 
   def test_params
-     params.require(:test).permit(:title, :level)
+     params.require(:test).permit(:title, :level, :category_id)
   end
 
   def find_test
