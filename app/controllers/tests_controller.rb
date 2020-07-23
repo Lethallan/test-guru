@@ -36,7 +36,8 @@ class TestsController < ApplicationController
   end
 
   def destroy #DELETE /tests/:id
-    @test.delete
+    @test.destroy
+    redirect_to tests_path
   end
 
   private
@@ -53,5 +54,3 @@ class TestsController < ApplicationController
     render plain: 'No such test'
   end
 end
-
-

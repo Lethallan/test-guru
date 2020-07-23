@@ -1,32 +1,4 @@
 <h1>Create New Test</h1>
 
-<%= form_with model: @test, local: true do |form| %>
-  <% if @test.errors.present? %>
-    <div>
-      <h2>WTF?! <%= pluralize(@test.errors.count, 'error') %>... oh, shi...</h2>
-
-      <ul>
-        <% @test.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <p>
-      <%= form.label :title %><br>
-      <%= form.text_field :title, id: :test_title %>
-  </p>
-
-  <p>
-    <%= form.label :level %><br>
-    <%= form.number_field :level, id: :test_level %>
-  </p>
-
-  <p>
-    <%= form.label :category_id %><br>
-    <%= form.collection_select :category_id, Category.all, :id, :topic, prompt: true %>
-  </p>
-
-  <p><%= form.submit %></p>
-<% end %>
+<%= render 'form' %>
+<%= link_to 'Back', tests_path %>
