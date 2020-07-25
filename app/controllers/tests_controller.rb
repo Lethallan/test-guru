@@ -22,6 +22,7 @@ class TestsController < ApplicationController
   end
 
   def show #GET /tests/:id
+    @questions = @test.questions
   end
 
   def edit #GET   /tests/:id/edit

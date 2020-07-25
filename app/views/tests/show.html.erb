@@ -8,5 +8,7 @@
   <%= @test.level %>
 </p>
 
+<%= render @questions %>
+<%= link_to 'New question', new_test_question_path(@test) %>
 <%= link_to 'Edit', edit_test_path(@test) %> |
 <%= link_to 'Back', tests_path %>
