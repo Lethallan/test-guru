@@ -6,14 +6,18 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header>
+      <%= render 'layouts/header' %>
+    </header>
     <%= yield %>
 
     <footer>
-      <%= Time.now %>
+      <%= render 'layouts/footer' %>
     </footer>
   </body>
 </html>

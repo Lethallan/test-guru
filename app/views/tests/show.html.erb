@@ -1,14 +1,15 @@
 <p>
-  <strong>Title:</strong>
-  <%= @test.title %>
+  <h1><%= @test.title %></h1>
 </p>
 
 <p>
   <strong>Level:</strong>
-  <%= @test.level %>
+  <%= @test.level %><br>
+  <%= @test.questions.count %> questions
 </p>
 
-<%= render @questions %>
-<%= link_to 'New question', new_test_question_path(@test) %>
+<%= link_to 'New question', new_test_question_path(@test), class: 'btn' %><br>
+
+<%= render @questions %><br>
 <%= link_to 'Edit', edit_test_path(@test) %> |
 <%= link_to 'Back', tests_path %>

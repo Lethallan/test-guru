@@ -48,29 +48,29 @@ Test.create(
   ]
 )
 
-Question.create(
-  [
-    { body: 'Blue catfish threadfin lungfish skate sargassum fish', test_id: 1 },
-    { body: 'Rock bass lightfish merluccid hake galjoen fish sea toad duckbill eel', test_id: 2 },
-    { body: 'Viperfish--dealfish mummichog California flyingfish walleye Old World', test_id: 3 },
-    { body: 'Electric stargazer titan triggerfish deepwater flathead man-of-war fish', test_id: 4 },
-    { body: 'Warbonnet Cherubfish algae eater tiger barb swallower shovelnose sturgeon madtom wasp fish', test_id: 5 },
-    { body: 'Does your lorem ipsum text long for something a little fishier?', test_id: 6 },
-    { body: 'Shovelnose sturgeon nurseryfish Rasbora', test_id: 7 }
-  ]
-)
+# Question.create(
+#   [
+#     { body: 'Blue catfish threadfin lungfish skate sargassum fish', test_id: 1 },
+#     { body: 'Rock bass lightfish merluccid hake galjoen fish sea toad duckbill eel', test_id: 2 },
+#     { body: 'Viperfish--dealfish mummichog California flyingfish walleye Old World', test_id: 3 },
+#     { body: 'Electric stargazer titan triggerfish deepwater flathead man-of-war fish', test_id: 4 },
+#     { body: 'Warbonnet Cherubfish algae eater tiger barb swallower shovelnose sturgeon madtom wasp fish', test_id: 5 },
+#     { body: 'Does your lorem ipsum text long for something a little fishier?', test_id: 6 },
+#     { body: 'Shovelnose sturgeon nurseryfish Rasbora', test_id: 7 }
+#   ]
+# )
 
-Answer.create(
-  [
-    { body: 'Silverside; southern sandfish pufferfish', question_id: 1 },
-    { body: 'Unicorn fish armored gurnard weatherfish', question_id: 2 },
-    { body: 'Banjo catfish southern flounder lizardfish zebra trout alewife soapfish blackchin pencil catfish', question_id: 3 },
-    { body: 'Pike characid silverside golden loach', question_id: 4 },
-    { body: 'Zebra turkeyfish', question_id: 5 },
-    { body: 'Shovelnose sturgeon kaluga', question_id: 6 },
-    { body: 'It’s too fishy!', question_id: 7 }
-  ]
-)
+# Answer.create(
+#   [
+#     { body: 'Silverside; southern sandfish pufferfish', question_id: 1 },
+#     { body: 'Unicorn fish armored gurnard weatherfish', question_id: 2 },
+#     { body: 'Banjo catfish southern flounder lizardfish zebra trout alewife soapfish blackchin pencil catfish', question_id: 3 },
+#     { body: 'Pike characid silverside golden loach', question_id: 4 },
+#     { body: 'Zebra turkeyfish', question_id: 5 },
+#     { body: 'Shovelnose sturgeon kaluga', question_id: 6 },
+#     { body: 'It’s too fishy!', question_id: 7 }
+#   ]
+# )
 
 TestsUser.create(
   [
