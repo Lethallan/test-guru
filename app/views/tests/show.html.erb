@@ -10,6 +10,9 @@
 
 <%= link_to 'New question', new_test_question_path(@test), class: 'btn' %><br>
 
-<%= render @questions %><br>
+<ol>
+  <%= render @test.questions %>
+</ol>
+
 <%= link_to 'Edit', edit_test_path(@test) %> |
 <%= link_to 'Back', tests_path %>
