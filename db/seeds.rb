@@ -72,15 +72,15 @@ Answer.create(
   ]
 )
 
-TestsUser.create(
-  [
-    { user_id: 1 , test_id: 1 },
-    { user_id: 1 , test_id: 5 },
-    { user_id: 2 , test_id: 2 },
-    { user_id: 2 , test_id: 3 },
-    { user_id: 3 , test_id: 4 },
-    { user_id: 4 , test_id: 7 },
-    { user_id: 5 , test_id: 6 },
-    { user_id: 5 , test_id: 1 }
-  ]
-)
+# TestPassage.create(
+#   [
+#     { user_id: 1 , test_id: 1 },
+#     { user_id: 1 , test_id: 5 },
+#     { user_id: 2 , test_id: 2 },
+#     { user_id: 2 , test_id: 3 },
+#     { user_id: 3 , test_id: 4 },
+#     { user_id: 4 , test_id: 7 },
+#     { user_id: 5 , test_id: 6 },
+#     { user_id: 5 , test_id: 1 }
+#   ]
+# )

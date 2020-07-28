@@ -6,10 +6,13 @@ class User < ApplicationRecord
   #       .where('usertests.status_id >= :status', status: 2)
   # end
 
-  # has_and_belongs_to_many :tests
-  has_many :author_tests, class_name: 'Test'
-  has_many :tests_users
-  has_many :tests, through: :tests_users
+  has_many :test_passages
+  has_many :tests, through: :test_passages
+  has_many :author_tests, class_name: 'Test', foreign_key: :user_id
 
   validates :name, :email, presence: true, uniqueness: true
+
+  def test_passage(test)
+    test_passages.order(id: :desc).find_by(test_id: test.id)
+  end
 end
