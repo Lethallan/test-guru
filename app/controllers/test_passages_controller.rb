@@ -1,7 +1,7 @@
 class TestPassagesController < ApplicationController
   before_action :set_test_passage, only: %i[show update result]
-  before_action :set_current_question_number, only: :show
-  before_action :count_questions, only: %i[show result]
+  before_action :set_current_question_number, only: %i[show update]
+  before_action :count_questions, only: %i[show update result]
 
 
   def show
@@ -33,8 +33,5 @@ class TestPassagesController < ApplicationController
 
   def count_questions
     @count_questions = @test_passage.test.questions.count
-  end
-
-  def percentage
   end
 end
