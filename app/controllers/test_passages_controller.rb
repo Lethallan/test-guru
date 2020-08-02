@@ -1,6 +1,5 @@
 class TestPassagesController < ApplicationController
   before_action :set_test_passage, only: %i[show update result]
-  before_action :set_current_question_number, only: %i[show update]
   before_action :count_questions, only: %i[show update result]
 
 
@@ -25,10 +24,6 @@ class TestPassagesController < ApplicationController
 
   def set_test_passage
     @test_passage = TestPassage.find(params[:id])
-  end
-
-  def set_current_question_number
-    @current_question_number = @test_passage.test.questions.index(@test_passage.current_question) + 1
   end
 
   def count_questions
