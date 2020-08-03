@@ -1,0 +1,13 @@
+<h1>"<%= @test_passage.test.title %>" has been finished!</h1>
+<%= @test_passage.correct_questions %> correct answers out of <%= @count_questions%><br>
+<br>
+<h2>Your result:</h2>
+
+  <% if @percentage >= 85 %>
+      <h3 style="color:#66FFA9;"><%= @percentage %></h3>
+      <h3>You've passed the test successfully!</h3>
+  <% else %>
+      <h3 style="color:#FF3299;"><%= @percentage %></h3>
+      <p>It's not enought to pass the test.<br>
+        Please, try again!</p>
+  <% end %>

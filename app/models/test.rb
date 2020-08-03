@@ -1,10 +1,10 @@
 class Test < ApplicationRecord
   #связи
-  belongs_to :category
-  belongs_to :author, class_name: 'User', foreign_key: 'user_id'
+  belongs_to :category, optional: true
+  belongs_to :author, class_name: 'User', foreign_key: 'user_id', optional: true
   has_many :questions
-  has_many :tests_users
-  has_many :users, through: :tests_users
+  has_many :test_passages
+  has_many :users, through: :test_passages
 
   #скопы
   default_scope { order(created_at: :desc) }
@@ -27,5 +27,4 @@ class Test < ApplicationRecord
   def validate_max_level
     errors.add(:level) if level.to_i > 10
   end
-
 end

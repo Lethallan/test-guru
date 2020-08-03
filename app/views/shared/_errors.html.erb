@@ -1,6 +1,6 @@
   <% if resource.errors.present? %>
     <div>
-      <h2>WTF?! <%= pluralize(@test.errors.count, 'error') %>... oh, shi...</h2>
+      <h2>WTF?! <%= pluralize(resource.errors.count, 'error') %>... oh, shi...</h2>
 
       <ul>
         <% resource.errors.full_messages.each do |message| %>

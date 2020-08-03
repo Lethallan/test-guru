@@ -1,12 +1,8 @@
 class QuestionsController < ApplicationController
-  before_action :find_test, only: %i[index new create]
+  before_action :find_test, only: %i[new create]
   before_action :find_question, only: %i[show update edit destroy]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_question_not_found
-
-  def index
-    @questions = @test.questions
-  end
 
   def new
     @question = @test.questions.new
@@ -16,7 +12,7 @@ class QuestionsController < ApplicationController
     @question = @test.questions.new(question_params)
 
     if @question.save
-      redirect_to test_path(@question.test)
+      redirect_to test_path(@question.test), notice: 'Question was successfully creared.'
     else
       render :new
     end

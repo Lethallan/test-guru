@@ -5,12 +5,12 @@ class Answer < ApplicationRecord
 
   validates :body, presence: true
 
-  validate :validate_max_answers_amount
+  # validate :validate_max_answers_amount
 
   private
 
-  def validate_max_answers_amount
-    amount = self.question.answers.size
-    errors.add(amount) if amount > 4
-  end
+  # def validate_max_answers_amount
+  #   amount = self.question.answers.size
+  #   errors.add(amount) if amount > 4
+  # end
 end
