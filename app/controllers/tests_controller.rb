@@ -1,4 +1,5 @@
 class TestsController < ApplicationController
+  before_action :authenticate_user!
   before_action :find_test, only: %i[show destroy edit update start]
   before_action :set_user, only: :start
 
@@ -64,5 +65,6 @@ class TestsController < ApplicationController
 
   def set_user
     @user = User.first
+    #Перестало работать прохождение теста после добавления аутентификации... похоже, тут конфликт.
   end
 end
