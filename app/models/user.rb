@@ -12,7 +12,7 @@ class User < ApplicationRecord
   has_secure_password
 
   # validates :name, presence: true
-  # validates :email, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: true
   # validates :password, presence: true, if: Proc.new { |u| u.password_digest.blank? }
   # validates :password, confirmation: true
 

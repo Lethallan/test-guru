@@ -1,7 +1,7 @@
 class TestsController < ApplicationController
   before_action :authenticate_user!
-  before_action :find_test, only: %i[show destroy edit update start]
   before_action :set_user, only: :start
+  before_action :find_test, only: %i[show destroy edit update start]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
 
@@ -64,7 +64,6 @@ class TestsController < ApplicationController
   end
 
   def set_user
-    @user = User.first
-    #Перестало работать прохождение теста после добавления аутентификации... похоже, тут конфликт.
+    @user = @current_user
   end
 end
