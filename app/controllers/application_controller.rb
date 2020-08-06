@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+  before_action :authenticate_user!
   protect_from_forgery with: :exception
 
   helper_method :current_user,
@@ -8,7 +9,7 @@ class ApplicationController < ActionController::Base
 
   def authenticate_user!
     unless current_user
-      return redirect_to login_path, alert: 'You need to verify your email and password'
+      return redirect_to login_path, alert: 'You need to log in or sing up'
     end
 
     cookies[:email] = current_user&.email

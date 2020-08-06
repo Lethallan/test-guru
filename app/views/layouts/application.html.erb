@@ -19,6 +19,8 @@
       <p class="nav user">Hello, <b><%= current_user.name %></b>!</p>
     <% end %>
 
+    <%= render 'layouts/flash' %>
+
     <%= yield %>
 
     <footer>
