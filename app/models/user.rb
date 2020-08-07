@@ -1,6 +1,8 @@
 require 'digest/sha1'
 require 'bcrypt'
 
+VALID_EMAIL_REGEXP = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
 class User < ApplicationRecord
 
   include BCrypt
@@ -11,8 +13,8 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  # validates :name, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :name, presence: true
+  validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEXP }
   # validates :password, presence: true, if: Proc.new { |u| u.password_digest.blank? }
   # validates :password, confirmation: true
 

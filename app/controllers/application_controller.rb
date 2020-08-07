@@ -8,6 +8,7 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
+    #куки с пармаметрами контроллера и экшена (путь до того, как юхер пошёл логиниться)
     unless current_user
       return redirect_to login_path, alert: 'You need to log in or sing up'
     end

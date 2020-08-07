@@ -9,6 +9,7 @@ class SessionsController < ApplicationController
 
     if user&.authenticate(params[:password])
       session[:user_id] = user.id
+      #проверка на наличие куки из контроллера приложения
       redirect_to tests_path
     else
       flash.now[:alert] = 'You need to verify your email and password'
