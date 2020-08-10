@@ -8,13 +8,13 @@
 
 User.create!(
   [
-    { name: 'Bilbo Baggins', email: 'bilbo@bla.com', password: 'bilbo' },
-    { name: 'Morgoth Bauglir', email: 'melkor_the_best@bla.com', password: 'morgoth' },
-    { name: 'Gandalf the Grey', email: 'sauron_sucks@bla.com', password: 'gandalf' },
-    { name: 'Galadriel', email: 'gimli_fck_off@bla.com', password: 'galadriel' },
-    { name: 'Tranduil', email: 'elvish_badass@bla.com', password: 'tranduil' },
-    { name: 'Aragorn', email: 'like_a_boss@bla.com', password: 'aragorn' },
-    { name: 'Arven', email: 'fck_immortality@bla.com', password: 'arven' }
+    { name: 'Bilbo Baggins', email: 'bilbo@bla.com', password: '123456' },
+    { name: 'Morgoth Bauglir', email: 'melkor_the_best@bla.com', password: '123456' },
+    { name: 'Gandalf the Grey', email: 'sauron_sucks@bla.com', password: '123456' },
+    { name: 'Galadriel', email: 'gimli_fck_off@bla.com', password: '123456' },
+    { name: 'Tranduil', email: 'elvish_badass@bla.com', password: '123456' },
+    { name: 'Aragorn', email: 'like_a_boss@bla.com', password: '123456' },
+    { name: 'Arven', email: 'fck_immortality@bla.com', password: '123456' }
   ]
 )
 
