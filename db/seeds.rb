@@ -6,26 +6,19 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-# rails db:create
-# Создать миграции по образцу AddTestRefToCategories (всё в один файл)
-# rails db:migrate
-# потом прописать все сиды в порядке: категории, тесты, вопросы, ответы, юзеры, статусы # rails g model status status:string, ЮЗЕРТЕСТЫ (массивами хэшей по 5 штук)
-# Юзертесты - сгенерировать для них модель
-# rails db:seed
-
-User.create(
+User.create!(
   [
-    { name: 'Bilbo Baggins', email: 'bilbo@bla.com' },
-    { name: 'Morgoth Bauglir', email: 'melkor_the_best@bla.com' },
-    { name: 'Gandalf the Grey', email: 'sauron_sucks@bla.com' },
-    { name: 'Galadriel', email: 'gimli_fck_off@bla.com' },
-    { name: 'Tranduil', email: 'elvish_badass@bla.com' },
-    { name: 'Aragorn', email: 'like_a_boss@bla.com' },
-    { name: 'Arven', email: 'fck_immortality@bla.com' }
+    { name: 'Bilbo Baggins', email: 'bilbo@bla.com', password: 'bilbo' },
+    { name: 'Morgoth Bauglir', email: 'melkor_the_best@bla.com', password: 'morgoth' },
+    { name: 'Gandalf the Grey', email: 'sauron_sucks@bla.com', password: 'gandalf' },
+    { name: 'Galadriel', email: 'gimli_fck_off@bla.com', password: 'galadriel' },
+    { name: 'Tranduil', email: 'elvish_badass@bla.com', password: 'tranduil' },
+    { name: 'Aragorn', email: 'like_a_boss@bla.com', password: 'aragorn' },
+    { name: 'Arven', email: 'fck_immortality@bla.com', password: 'arven' }
   ]
 )
 
-Category.create(
+Category.create!(
   [
     { topic: 'Ruby' },
     { topic: 'Rails' },
@@ -35,7 +28,7 @@ Category.create(
   ]
 )
 
-Test.create(
+Test.create!(
   [
     { title: 'Ruby - beginner', level: 1, category_id: 1, user_id: User.find_by(name: 'Arven').id },
     { title: 'Ruby - advanced', level: 2, category_id: 1, user_id: User.find_by(name: 'Arven').id },
@@ -48,7 +41,7 @@ Test.create(
   ]
 )
 
-Question.create(
+Question.create!(
   [
     { body: 'Blue catfish threadfin lungfish skate sargassum fish', test_id: 1 },
     { body: 'Rock bass lightfish merluccid hake galjoen fish sea toad duckbill eel', test_id: 2 },
@@ -60,7 +53,7 @@ Question.create(
   ]
 )
 
-Answer.create(
+Answer.create!(
   [
     { body: 'Silverside; southern sandfish pufferfish', question_id: 1 },
     { body: 'Unicorn fish armored gurnard weatherfish', question_id: 2 },

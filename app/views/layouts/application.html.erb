@@ -14,6 +14,13 @@
     <header>
       <%= render 'layouts/header' %>
     </header>
+
+    <% if logged_in? %>
+      <p style="text-align: right;">Welcome to&nbsp;<%= link_to 'TestGuru', root_path %>,&nbsp;<b><%= current_user.name %></b>!</p>
+    <% end %>
+
+    <%= render 'layouts/flash' %>
+
     <%= yield %>
 
     <footer>
