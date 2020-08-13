@@ -27,7 +27,6 @@ class CreateTables < ActiveRecord::Migration[6.0]
     end
 
     create_table :users do |t|
-      t.string :name
       t.string :email
 
       t.timestamps

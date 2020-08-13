@@ -1,17 +1,18 @@
 # require 'digest/sha1'
-require 'bcrypt'
-
-VALID_EMAIL_REGEXP = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-devise :database_authenticatable,
-       :registerable,
-       :recoverable,
-       :rememberable,
-       :validatable,
-       :confirmable
+  require 'bcrypt'
+
+  VALID_EMAIL_REGEXP = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+
+  devise :database_authenticatable,
+        :registerable,
+        :recoverable,
+        :rememberable,
+        :validatable,
+        :confirmable
 
   include BCrypt
 

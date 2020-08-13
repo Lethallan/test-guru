@@ -1,7 +1,8 @@
 <% if user_signed_in? %>
   <div id="header">
     <div class="btn-group">
-      <%= link_to 'To Tests', tests_path, class: 'btn' %>
+      <%= link_to 'To Tests', admin_tests_path, class: 'btn' %>
+      <%= link_to 'New test', new_admin_test_path, class: 'btn' %>
       <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn' %>
     </div>
   </div>
