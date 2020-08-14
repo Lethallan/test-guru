@@ -6,13 +6,12 @@
   <strong>Level:</strong>
   <%= @test.level %><br>
   <%= @test.questions.count %> questions
-</p>
+</p><br>
 
 <%= link_to 'New question', new_test_question_path(@test), class: 'btn' %><br>
 
 <ol>
-  <%# <%= render @test.questions %> %>
-  <%= render partial: 'questions/question', collection: @test.questions %>
+  <%= render @test.questions %>
 </ol>
 
 <%= link_to 'Edit', edit_admin_test_path(@test) %> |

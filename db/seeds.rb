@@ -8,13 +8,13 @@
 
 User.create!(
   [
-    # { first_name: 'Bilbo', last_name: 'Baggins', email: 'bilbo@bla.com', password: '123456' },
-    # { first_name: 'Morgoth', last_name: 'Bauglir', email: 'melkor_the_best@bla.com', password: '123456' },
+    { first_name: 'Bilbo', last_name: 'Baggins', email: 'bilbo@bla.com', password: '123456' },
+    { first_name: 'Morgoth', last_name: 'Bauglir', email: 'melkor_the_best@bla.com', password: '123456', type: 'Admin' },
     { first_name: 'Gandalf', last_name: 'the Grey', email: 'sauron_sucks@bla.com', password: '123456', type: 'Admin' },
-    # { first_name: 'Galadriel', last_name: 'Lady of Light', email: 'gimli_fck_off@bla.com', password: '123456' },
-    # { first_name: 'Tranduil', last_name: 'of Mirkwood', email: 'elvish_badass@bla.com', password: '123456' },
-    # { first_name: 'Aragorn', last_name: 'Elesssar', email: 'like_a_boss@bla.com', password: '123456' },
-    # { first_name: 'Arven', last_name: 'Undomiel', email: 'fck_immortality@bla.com', password: '123456' }
+    { first_name: 'Galadriel', last_name: 'Lady of Light', email: 'gimli_fck_off@bla.com', password: '123456' },
+    { first_name: 'Tranduil', last_name: 'of Mirkwood', email: 'elvish_badass@bla.com', password: '123456' },
+    { first_name: 'Aragorn', last_name: 'Elesssar', email: 'like_a_boss@bla.com', password: '123456' },
+    { first_name: 'Arven', last_name: 'Undomiel', email: 'fck_immortality@bla.com', password: '123456' }
   ]
 )
 

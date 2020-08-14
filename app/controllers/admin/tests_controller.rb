@@ -1,5 +1,4 @@
 class Admin::TestsController < Admin::BaseController
-  # before_action :set_user, only: :start
   before_action :find_test, only: %i[show destroy edit update]
 
   rescue_from ActiveRecord::RecordNotFound, with: :rescue_with_test_not_found
@@ -14,9 +13,10 @@ class Admin::TestsController < Admin::BaseController
 
   def create #POST
     @test = Test.new(test_params)
+    current_user.author_tests.new(test_params)
 
-    if @test.save
-      redirect_to @test
+    if @test.save!
+      redirect_to admin_tests_path
     else
       render :new
     end
@@ -39,13 +39,13 @@ class Admin::TestsController < Admin::BaseController
 
   def destroy #DELETE /tests/:id
     @test.destroy
-    redirect_to tests_path
+    redirect_to admin_tests_path
   end
 
   private
 
   def test_params
-     params.require(:test).permit(:title, :level, :category_id)
+     params.require(:test).permit(:title, :level, :category_id, :user_id)
   end
 
   def find_test

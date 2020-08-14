@@ -1,4 +1,4 @@
-class AnswersController < ApplicationController
+class Admin::AnswersController < Admin::BaseController
   before_action :set_answer, only: %i[show edit update destroy]
   before_action :find_question, only: %i[new create]
 
@@ -15,7 +15,7 @@ class AnswersController < ApplicationController
   def create
     @answer = @question.answers.new(answer_params)
 
-    if @answer.save
+    if @answer.save!
       redirect_to @answer, notice: 'Answer was successfully created.'
     else
       render :new
