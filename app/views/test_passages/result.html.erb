@@ -1,4 +1,4 @@
-<h1>"<%= @test_passage.test.title %>" has been finished!</h1>
+<h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <%= @test_passage.correct_questions %> correct answers out of <%= @count_questions%><br>
 <br>
 <h2>Your result:</h2>
