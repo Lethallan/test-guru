@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Admin Panel | TestGuru</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header>
+      <%= render 'layouts/admin_header' %>
+    </header>
+
+    <% if user_signed_in? %>
+      <p style="text-align: right;">
+        Welcome to&nbsp;<%= link_to 'TestGuru', root_path %>,&nbsp;<b><%= current_user.first_name %> <%= current_user.last_name %></b>
+      </p>
+    <% end %>
+
+    <%= render 'shared/flash' %>
+
+    <%= yield %>
+
+    <footer>
+      <%= render 'layouts/footer' %>
+    </footer>
+  </body>
+</html>

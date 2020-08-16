@@ -1,16 +1,15 @@
-<% if logged_in? %>
+<% if user_signed_in? %>
   <div id="header">
     <div class="btn-group">
       <%= link_to 'To Tests', tests_path, class: 'btn' %>
-      <%= link_to 'New test', new_test_path, class: 'btn' %>
-      <%= link_to 'Log out', logout_path, class: 'btn' %>
+      <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: 'btn' %>
     </div>
   </div>
  <% else %>
   <div id="header">
     <div class="btn-group">
-      <%= link_to 'Login', login_path, class: 'btn' %>
-      <%= link_to 'Sign up', signup_path, class: 'btn' %>
+      <%= link_to 'Login', new_user_session_path, class: 'btn' %>
+      <%= link_to 'Sign up', new_user_registration_path, class: 'btn' %>
     </div>
   </div>
  <% end %>

@@ -8,13 +8,13 @@
 
 User.create!(
   [
-    { name: 'Bilbo Baggins', email: 'bilbo@bla.com', password: 'bilbo' },
-    { name: 'Morgoth Bauglir', email: 'melkor_the_best@bla.com', password: 'morgoth' },
-    { name: 'Gandalf the Grey', email: 'sauron_sucks@bla.com', password: 'gandalf' },
-    { name: 'Galadriel', email: 'gimli_fck_off@bla.com', password: 'galadriel' },
-    { name: 'Tranduil', email: 'elvish_badass@bla.com', password: 'tranduil' },
-    { name: 'Aragorn', email: 'like_a_boss@bla.com', password: 'aragorn' },
-    { name: 'Arven', email: 'fck_immortality@bla.com', password: 'arven' }
+    { first_name: 'Bilbo', last_name: 'Baggins', email: 'bilbo@bla.com', password: '123456' },
+    { first_name: 'Morgoth', last_name: 'Bauglir', email: 'melkor_the_best@bla.com', password: '123456', type: 'Admin' },
+    { first_name: 'Gandalf', last_name: 'the Grey', email: 'sauron_sucks@bla.com', password: '123456', type: 'Admin' },
+    { first_name: 'Galadriel', last_name: 'Lady of Light', email: 'gimli_fck_off@bla.com', password: '123456' },
+    { first_name: 'Tranduil', last_name: 'of Mirkwood', email: 'elvish_badass@bla.com', password: '123456' },
+    { first_name: 'Aragorn', last_name: 'Elesssar', email: 'like_a_boss@bla.com', password: '123456' },
+    { first_name: 'Arven', last_name: 'Undomiel', email: 'fck_immortality@bla.com', password: '123456' }
   ]
 )
 
@@ -30,14 +30,13 @@ Category.create!(
 
 Test.create!(
   [
-    { title: 'Ruby - beginner', level: 1, category_id: 1, user_id: User.find_by(name: 'Arven').id },
-    { title: 'Ruby - advanced', level: 2, category_id: 1, user_id: User.find_by(name: 'Arven').id },
-    { title: 'Rails - beginner', level: 2, category_id: 2, user_id: User.find_by(name: 'Arven').id },
-    { title: 'Rails - advanced', level: 3, category_id: 2, user_id: User.find_by(name: 'Arven').id },
-    { title: 'HTML - beginner', level: 1, category_id: 3, user_id: User.find_by(name: 'Arven').id },
-    { title: 'CSS - beginner', level: 1, category_id: 4, user_id: User.find_by(name: 'Arven').id },
-    { title: 'JavaScript - beginner', level: 2, category_id: 5, user_id: User.find_by(name: 'Arven').id }
-    # { title: 'JavaScript - beginner', level: 2, category_id: 5, user_id: User.find_by(name: 'Arven').id }
+    { title: 'Ruby - beginner', level: 1, category_id: 1, user_id: User.find_by(email: 'sauron_sucks@bla.com').id },
+    { title: 'Ruby - advanced', level: 2, category_id: 1, user_id: User.find_by(email: 'sauron_sucks@bla.com').id },
+    { title: 'Rails - beginner', level: 2, category_id: 2, user_id: User.find_by(email: 'sauron_sucks@bla.com').id },
+    { title: 'Rails - advanced', level: 3, category_id: 2, user_id: User.find_by(email: 'sauron_sucks@bla.com').id },
+    { title: 'HTML - beginner', level: 1, category_id: 3, user_id: User.find_by(email: 'sauron_sucks@bla.com').id },
+    { title: 'CSS - beginner', level: 1, category_id: 4, user_id: User.find_by(email: 'sauron_sucks@bla.com').id },
+    { title: 'JavaScript - beginner', level: 2, category_id: 5, user_id: User.find_by(email: 'sauron_sucks@bla.com').id }
   ]
 )
 

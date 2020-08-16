@@ -15,11 +15,13 @@
       <%= render 'layouts/header' %>
     </header>
 
-    <% if logged_in? %>
-      <p style="text-align: right;">Welcome to&nbsp;<%= link_to 'TestGuru', root_path %>,&nbsp;<b><%= current_user.name %></b>!</p>
+    <% if user_signed_in? %>
+      <p style="text-align: right;">
+        Welcome to&nbsp;<%= link_to 'TestGuru', root_path %>,&nbsp;<b><%= current_user.first_name %> <%= current_user.last_name %></b>
+      </p>
     <% end %>
 
-    <%= render 'layouts/flash' %>
+    <%= render 'shared/flash' %>
 
     <%= yield %>
 

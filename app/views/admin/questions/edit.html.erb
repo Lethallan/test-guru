@@ -1,0 +1,8 @@
+<h1> Edit <%= @question.body %></h1>
+
+<p>
+  <%= @question.test.title %>
+</p>
+
+<%= render 'form' %>
+<%= link_to 'Back', admin_test_path(@question.test) %>
