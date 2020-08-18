@@ -37,17 +37,25 @@ ru:
       header: "Тест '%{title}' завершён."
 
   admin:
-      tests:
-        create:
-          success: "Тест был успешно создан."
-        update:
-          success: "Тест был успешно обновлён"
-        destroy:
-          success: "Тест был успешно удалён"
-        index:
-          header: "Доступные тесты"
-        show:
-          no_test: "Нет такого теста"
+    tests:
+      create:
+        success: "Тест был успешно создан."
+      update:
+        success: "Тест был успешно обновлён"
+      destroy:
+        success: "Тест был успешно удалён"
+      index:
+        header: "Доступные тесты"
+        title:  "Название"
+        level: "Уровень"
+        author: "Автор"
+        actions: "Действия"
+      show:
+        no_test: "Нет такого теста"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
 
   tests_mailer:
     completed_test:

@@ -46,8 +46,16 @@ en:
         success: "Test was successfully deteled"
       index:
         header: "Available tests"
+        title: "Title"
+        level: "Level"
+        author: "Author"
+        actions: "Actions"
       show:
         no_test: "No such test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
 
   tests_mailer:
     completed_test:
