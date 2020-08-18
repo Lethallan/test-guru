@@ -31,7 +31,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update #PATCH
     if @test.update(test_params)
-      redirect_to @test
+      redirect_to admin_tests_path, notice: t('.success')
     else
       render :edit
     end
@@ -39,7 +39,7 @@ class Admin::TestsController < Admin::BaseController
 
   def destroy #DELETE /tests/:id
     @test.destroy
-    redirect_to admin_tests_path
+    redirect_to admin_tests_path, notice: t('.success')
   end
 
   private
@@ -53,6 +53,6 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def rescue_with_test_not_found
-    render plain: 'No such test'
+    redirect_to admin_tests_path, notice: t('.no_test')
   end
 end

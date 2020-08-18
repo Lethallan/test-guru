@@ -1,6 +1,9 @@
 ru:
   hello: "Привет мир"
 
+  application:
+    welcome: 'Добро пожаловать на'
+
   helpers:
     submit:
       test:
@@ -23,17 +26,28 @@ ru:
   tests:
     index:
       header: "Доступные тесты"
+      title:  "Название"
+      level: "Уровень"
+      author: "Автор"
+    test:
+      start: "Начать"
 
   test_passages:
     result:
-      header: "Тест %{title} завершён."
+      header: "Тест '%{title}' завершён."
 
   admin:
       tests:
         create:
           success: "Тест был успешно создан."
+        update:
+          success: "Тест был успешно обновлён"
+        destroy:
+          success: "Тест был успешно удалён"
         index:
           header: "Доступные тесты"
+        show:
+          no_test: "Нет такого теста"
 
   tests_mailer:
     completed_test:

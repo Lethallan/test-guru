@@ -1,6 +1,9 @@
 en:
   hello: "Hello world"
 
+  application:
+    welcome: 'Welcome to'
+
   helpers:
     submit:
       test:
@@ -21,18 +24,31 @@ en:
   tests:
     index:
       header: "Available tests"
+      title: "Title"
+      level: "Level"
+      author: "Author"
+    test:
+      start: "Start"
 
   test_passages:
     result:
-      header: "Test %{title} completed."
+      header: "Test '%{title}' completed."
 
   admin:
+    application:
+      welcome: 'Welcome to'
     tests:
       create:
         success: "Test was successfully created."
+      update:
+        success: "Test was successfully updated"
+      destroy:
+        success: "Test was successfully deteled"
       index:
         header: "Available tests"
-  
+      show:
+        no_test: "No such test"
+
   tests_mailer:
     completed_test:
       subject: "You have just completed the TestGuru test!"
