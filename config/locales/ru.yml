@@ -1,0 +1,83 @@
+ru:
+  hello: "Привет мир"
+
+  application:
+    welcome: 'Добро пожаловать на'
+
+  helpers:
+    submit:
+      test:
+        create: "Создать тест"
+        update: "Обновить тест"
+    label:
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+
+  shared:
+    errors:
+      header:
+        few: "Обнаружено %{count} ошибки"
+        many: "Обнаружено %{count} ошибок"
+        one: "Обнаружена %{count} ошибка"
+        other: "Обнаружена %{count} ошибки"
+
+  tests:
+    index:
+      header: "Доступные тесты"
+      title:  "Название"
+      level: "Уровень"
+      author: "Автор"
+    test:
+      start: "Начать"
+
+  test_passages:
+    result:
+      header: "Тест '%{title}' завершён."
+      correct_answers: "Верные ответы"
+      out_of: "из"
+      your_result: "Ваш результат:"
+      success: "Вы успешно прошли тест!"
+      fail: "Вы набрали недостаточно баллов."
+      try_again: "Попробуйте ещё раз!"
+    show:
+      header: "Вы проходите тест"
+      count_questions: "вопрос из"
+      next: "Дальше"
+
+  admin:
+    tests:
+      new:
+        header: "Создание нового теста"
+        back: "Назад"
+      create:
+        success: "Тест был успешно создан."
+      edit:
+        header: "Редактирование теста"
+        back: "Назад"
+      update:
+        success: "Тест был успешно обновлён"
+      destroy:
+        success: "Тест был успешно удалён"
+      index:
+        header: "Доступные тесты"
+        title:  "Название"
+        level: "Уровень"
+        author: "Автор"
+        actions: "Действия"
+      show:
+        level: "Уровень"
+        count_questions: "Всего вопросов"
+        new_question: "Добавить вопрос"
+        edit: "Редактировать"
+        back: "Назад"
+        no_test: "Нет такого теста"
+      test:
+        show: "Показать"
+        edit: "Редактировать"
+        delete: "Удалить"
+
+  tests_mailer:
+    completed_test:
+      subject: "Вы только что завершили тест на TestGuru!"

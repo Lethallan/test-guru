@@ -17,7 +17,7 @@
 
     <% if user_signed_in? %>
       <p style="text-align: right;">
-        Welcome to&nbsp;<%= link_to 'TestGuru', root_path %>,&nbsp;<b><%= current_user.first_name %> <%= current_user.last_name %></b>
+       <%= t('application.welcome') %>&nbsp;<%= link_to 'TestGuru', root_path %>,&nbsp;<b><%= current_user.first_name %> <%= current_user.last_name %></b>
       </p>
     <% end %>
 

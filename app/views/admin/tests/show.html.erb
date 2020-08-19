@@ -3,16 +3,16 @@
 </p>
 
 <p>
-  <strong>Level:</strong>
+  <strong><%= t('.level') %>:</strong>
   <%= @test.level %><br>
-  <%= @test.questions.count %> questions
+  <%= t('.count_questions') %>: <%= @test.questions.count %>
 </p><br>
 
-<%= link_to 'New question', new_test_question_path(@test), class: 'btn' %><br>
+<%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn' %><br>
 
 <ol>
   <%= render @test.questions %>
 </ol>
 
-<%= link_to 'Edit', edit_admin_test_path(@test) %> |
-<%= link_to 'Back', admin_tests_path %>
+<%= link_to t('.edit'), edit_admin_test_path(@test) %> |
+<%= link_to t('.back'), admin_tests_path %>

@@ -1,33 +1,83 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
   hello: "Hello world"
+
+  application:
+    welcome: 'Welcome to'
+
+  helpers:
+    submit:
+      test:
+        create: "Create test"
+        update: "Update test"
+    label:
+      test:
+        title: "Title"
+        level: "Level"
+        category_id: "Category"
+
+  shared:
+    errors:
+      header:
+        one: "%{count} error detected"
+        other: "%{count} errors detected"
+
+  tests:
+    index:
+      header: "Available tests"
+      title: "Title"
+      level: "Level"
+      author: "Author"
+    test:
+      start: "Start"
+
+  test_passages:
+    result:
+      header: "Test '%{title}' completed."
+      correct_answers: "Correct answers"
+      out_of: "out of"
+      your_result: "Your_result:"
+      success: "You've passed the test successfully!"
+      fail: "It's not enought to pass the test."
+      try_again: "Please, try again!"
+    show:
+      header: "You are passing"
+      count_questions: "question out of"
+      next: "Next"
+
+  admin:
+    application:
+      welcome: 'Welcome to'
+    tests:
+      new:
+        header: "Create new test"
+        back: "Back"
+      create:
+        success: "Test was successfully created."
+      edit:
+        header: "Edit test"
+        back: "Back"
+      update:
+        success: "Test was successfully updated"
+      destroy:
+        success: "Test was successfully deteled"
+      index:
+        header: "Available tests"
+        title: "Title"
+        level: "Level"
+        author: "Author"
+        actions: "Actions"
+      show:
+        level: "Level"
+        count_questions: "Amount of questions"
+        new_question: "New question"
+        edit: "Edit"
+        back: "Back"
+        no_test: "No such test"
+      test:
+        show: "Show"
+        edit: "Edit"
+        delete: "Delete"
+
+  tests_mailer:
+    completed_test:
+      subject: "You have just completed the TestGuru test!"
