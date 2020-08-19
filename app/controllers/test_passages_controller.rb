@@ -4,6 +4,7 @@ class TestPassagesController < ApplicationController
 
 
   def show
+    redirect_to root_path if @test_passage.test.questions.empty?
   end
 
   def result
