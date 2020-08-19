@@ -8,7 +8,7 @@
   <%= @test.questions.count %> questions
 </p><br>
 
-<%= link_to 'New question', new_test_question_path(@test), class: 'btn' %><br>
+<%= link_to 'New question', new_admin_test_question_path(@test), class: 'btn' %><br>
 
 <ol>
   <%= render @test.questions %>
