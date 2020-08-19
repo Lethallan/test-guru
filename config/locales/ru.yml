@@ -48,8 +48,14 @@ ru:
 
   admin:
     tests:
+      new:
+        header: "Создание нового теста"
+        back: "Назад"
       create:
         success: "Тест был успешно создан."
+      edit:
+        header: "Редактирование теста"
+        back: "Назад"
       update:
         success: "Тест был успешно обновлён"
       destroy:
@@ -61,6 +67,11 @@ ru:
         author: "Автор"
         actions: "Действия"
       show:
+        level: "Уровень"
+        count_questions: "Всего вопросов"
+        new_question: "Добавить вопрос"
+        edit: "Редактировать"
+        back: "Назад"
         no_test: "Нет такого теста"
       test:
         show: "Показать"

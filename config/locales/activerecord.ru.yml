@@ -12,6 +12,7 @@ ru:
       test:
         title: "Название"
         level: "Уровень"
+        category: "Категория"
       question:
         body: "Текст вопроса"
       answer:

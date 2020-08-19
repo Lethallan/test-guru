@@ -12,6 +12,7 @@ en:
       test:
         title: "Title"
         level: "Level"
+        category: "Category"
       question:
         body: "Body"
       answer:
