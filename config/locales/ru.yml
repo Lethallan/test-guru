@@ -35,6 +35,16 @@ ru:
   test_passages:
     result:
       header: "Тест '%{title}' завершён."
+      correct_answers: "Верные ответы"
+      out_of: "из"
+      your_result: "Ваш результат:"
+      success: "Вы успешно прошли тест!"
+      fail: "Вы набрали недостаточно баллов."
+      try_again: "Попробуйте ещё раз!"
+    show:
+      header: "Вы проходите тест"
+      count_questions: "вопрос из"
+      next: "Дальше"
 
   admin:
     tests:

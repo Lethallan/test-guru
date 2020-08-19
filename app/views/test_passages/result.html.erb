@@ -1,13 +1,14 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
-<%= @test_passage.correct_questions %> correct answers out of <%= @count_questions%><br>
+<%= t('.correct_answers') %>:
+<%= @test_passage.correct_questions %> <%= t('.out_of') %> <%= @count_questions%><br>
 <br>
-<h2>Your result:</h2>
+<h2><%= t('.your_result') %></h2>
 
   <% if @percentage >= 85 %>
       <h3 style="color:#66FFA9;"><%= @percentage %></h3>
-      <h3>You've passed the test successfully!</h3>
+      <h3><%= t('.success') %></h3>
   <% else %>
       <h3 style="color:#FF3299;"><%= @percentage %></h3>
-      <p>It's not enought to pass the test.<br>
-        Please, try again!</p>
+      <p><%= t('.fail') %><br>
+        <%= t('.try_again') %></p>
   <% end %>

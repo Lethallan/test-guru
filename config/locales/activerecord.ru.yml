@@ -2,10 +2,20 @@ ru:
   activerecord:
     models:
       test: "Тест"
+      question: "Вопрос"
+      answer: "Ответ"
+      user: "Пользователь"
+      admin: "Администратор"
+      test_passage: "Прохождение теста"
 
     attributes:
       test:
         title: "Название"
+        level: "Уровень"
+      question:
+        body: "Текст вопроса"
+      answer:
+        body: "Текст ответа"
 
     errors:
       messages:

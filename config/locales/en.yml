@@ -33,6 +33,16 @@ en:
   test_passages:
     result:
       header: "Test '%{title}' completed."
+      correct_answers: "Correct answers"
+      out_of: "out of"
+      your_result: "Your_result:"
+      success: "You've passed the test successfully!"
+      fail: "It's not enought to pass the test."
+      try_again: "Please, try again!"
+    show:
+      header: "You are passing"
+      count_questions: "question out of"
+      next: "Next"
 
   admin:
     application:
