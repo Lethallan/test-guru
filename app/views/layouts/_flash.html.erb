@@ -1,3 +1,5 @@
-    <% flash.each do |name, message| %>
-      <div class="<%= name %>"><%= message %></div>
-    <% end %>
+<% if user_signed_in? %>
+  <p style="text-align: left;">
+    <%= t('application.welcome') %> TestGuru,&nbsp;<b><%= current_user.first_name %> <%= current_user.last_name %></b>
+  </p>
+<% end %>
