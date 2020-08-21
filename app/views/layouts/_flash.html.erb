@@ -1,5 +1,5 @@
 <% if user_signed_in? %>
-  <p style="text-align: left;">
+  <div class="row justify-content-center mt-2">
     <%= t('application.welcome') %> TestGuru,&nbsp;<b><%= current_user.first_name %> <%= current_user.last_name %></b>
-  </p>
+  </div>
 <% end %>

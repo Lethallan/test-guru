@@ -1,13 +1,11 @@
 <nav class="navbar navbar-light bg-light">
   <%= link_to TestGuru, root_path, class: 'navbar-brand' %>
 
-  <% if user_signed_in? && current_user.type == 'Admin' %>
-    <%= link_to 'Режим администратора', admin_tests_path, class: 'navbar-brand' %>
-  <% end %>
-
   <span class="navbar-text">
     <% if user_signed_in? %>
-      <%= link_to 'Список всех тестов', tests_path, class: 'btn' %> |
+      <%= link_to 'Список всех тестов', admin_tests_path, class: 'btn' %> |
+      <%= link_to 'Создать новый тест', new_admin_test_path, class: 'btn' %> |
+      <%= link_to 'Режим пользователя', tests_path, class: 'btn' %> |
       <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn' %>
     <% else %>
       <%= link_to 'Войти', new_user_session_path, class: 'btn' %> |

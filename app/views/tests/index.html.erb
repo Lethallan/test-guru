@@ -1,12 +1,21 @@
-<h2><%= t('tests.index.header') %></h2>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-6">
 
-<table>
-  <tr>
-    <th><%= t('.title') %></th>
-    <th><%= t('.level') %></th>
-    <th><%= t('.author') %></th>
-    <th></th>
-  </tr>
+    <div class="card dorder-primary">
+      <div class="card-body">
+        <h2><%= t('tests.index.header') %></h2>
 
-  <%= render @tests %>
-</table>
+        <table>
+          <tr>
+            <th><%= t('.title') %></th>
+            <th><%= t('.level') %></th>
+            <th><%= t('.author') %></th>
+            <th></th>
+          </tr>
+
+          <%= render @tests %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
