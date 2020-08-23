@@ -77,6 +77,8 @@ ru:
         show: "Показать"
         edit: "Редактировать"
         delete: "Удалить"
+      form:
+        submit: "Готово"
 
   tests_mailer:
     completed_test:

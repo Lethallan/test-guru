@@ -1,4 +1,16 @@
-<h1><%= t('.header') %></h1>
+<div class="row justify-content-center mt-5">
+  <div class="col col-md-5">
 
-<%= render 'form' %>
-<%= link_to t('.back'), admin_tests_path %>
+    <h1><%= t('.header') %></h1>
+
+    <div class="card border-primary">
+      <div class="card-body">
+        <%= render 'form' %>
+      </div>
+    <div>
+
+    <div class="row justify-content-center mt-1">
+      <%= link_to t('.back'), admin_tests_path %>
+    <div>
+  </div>
+</div>

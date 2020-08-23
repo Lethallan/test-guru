@@ -3,9 +3,10 @@
 
     <h2>Log in</h2>
 
-    <div class="card dorder-primary">
+    <div class="card border-primary">
       <div class="card-body">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
           <div class="form-group">
             <p>
               <%= f.label :email %>
@@ -17,14 +18,14 @@
               <%= f.password_field :password, autocomplete: "current-password", class: 'form-control' %>
             </p>
 
-          <% if devise_mapping.rememberable? %>
-            <div class="form-check">
-              <%= f.label :remember_me, class: 'form-ckeck-label' do %>
-                <%= f.check_box :remember_me, class: 'form-check-input'%>
-                Remember me
-              <% end %>
-            </div>
-          <% end %>
+            <% if devise_mapping.rememberable? %>
+              <div class="form-check">
+                <%= f.label :remember_me, class: 'form-ckeck-label' do %>
+                  <%= f.check_box :remember_me, class: 'form-check-input'%>
+                  Remember me
+                <% end %>
+              </div>
+            <% end %>
 
             <%= f.submit "Enter", class: 'btn btn-primary' %>
           </div>

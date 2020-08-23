@@ -1,10 +1,10 @@
 <tr>
-  <td><%= test.title %></td>
-  <td><%= test.level %></td>
-  <td><%= test.author.first_name %></td>
-  <td><%= link_to t('.show'), admin_test_path(test) %></td>
-  <td><%= link_to t('.edit'), edit_admin_test_path(test) %></td>
-  <td><%= link_to t('.delete'),
+  <td scope="row"><%= test.title %></td>
+  <td scope="row"><%= test.level %></td>
+  <td scope="row"><%= test.author.first_name %></td>
+  <td scope="row"><%= link_to t('.show'), admin_test_path(test) %></td>
+  <td scope="row"><%= link_to t('.edit'), edit_admin_test_path(test) %></td>
+  <td scope="row"><%= link_to t('.delete'),
                   admin_test_path(test),
                   method: :delete,
                   data: { confirm: 'Are you sure?' } %>
