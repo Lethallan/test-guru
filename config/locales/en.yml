@@ -77,6 +77,8 @@ en:
         show: "Show"
         edit: "Edit"
         delete: "Delete"
+      form:
+        submit: "Ready"
 
   tests_mailer:
     completed_test:

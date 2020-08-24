@@ -1,6 +1,6 @@
 <tr>
-  <td><%= test.title %></td>
-  <td><%= test.level %></td>
-  <td><%= test.author.first_name %></td>
-  <td><%= button_to t('.start'), start_test_path(test) %></td>
+  <td scope="row"><%= test.title %></td>
+  <td scope="row"><%= test.level %></td>
+  <td scope="row"><%= test.author.first_name %></td>
+  <td scope="row"><%= link_to t('.start'), start_test_path(test), method: :post, class: 'btn btn-primary' %></td>
 </tr>

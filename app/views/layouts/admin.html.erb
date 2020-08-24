@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Admin Panel | TestGuru</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -12,18 +15,13 @@
 
   <body>
     <header>
-      <%= render 'layouts/admin_header' %>
+      <%= render 'layouts/nav_admin' %>
     </header>
 
-    <% if user_signed_in? %>
-      <p style="text-align: right;">
-        <%= t('application.welcome') %>&nbsp;<%= link_to 'TestGuru', root_path %>,&nbsp;<b><%= current_user.first_name %> <%= current_user.last_name %></b>
-      </p>
-    <% end %>
-
-    <%= render 'shared/flash' %>
-
-    <%= yield %>
+    <div class="container">
+      <%= render 'layouts/flash' %>
+      <%= yield %>
+    </div>
 
     <footer>
       <%= render 'layouts/footer' %>

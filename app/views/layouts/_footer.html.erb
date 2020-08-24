@@ -1,8 +1,9 @@
-<div id="footer">
-  ________________________<br>
-  TestGuru Project<br>
-  <%= Date.today.year %><br>
+<nav class="navbar navbar-light bg-light">
+    <span class="navbar-text">
+        TestGuru Project |
+        <%= Date.today.year %>
 
-  <%= link_to t('.english'), lang: :en %> |
-  <%= link_to t('.russian'), lang: :ru %><br>
-</div>
+        <%= link_to t('.english'), lang: :en, class: 'btn' %> |
+        <%= link_to t('.russian'), lang: :ru, class: 'btn' %>
+    </span>
+</nav>

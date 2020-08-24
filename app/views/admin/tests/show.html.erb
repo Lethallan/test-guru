@@ -1,18 +1,30 @@
-<p>
-  <h1><%= @test.title %></h1>
-</p>
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-8">
+    <div class="card border-default">
+      <div class="card-body">
+        <p>
+          <h1 style="text-align: center"><%= @test.title %></h1>
+        </p>
 
-<p>
-  <strong><%= t('.level') %>:</strong>
-  <%= @test.level %><br>
-  <%= t('.count_questions') %>: <%= @test.questions.count %>
-</p><br>
+        <p>
+          <strong><%= t('.level') %>:</strong>
+          <%= @test.level %><br>
+          <%= t('.count_questions') %>: <%= @test.questions.count %>
+        </p><br>
 
-<%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn' %><br>
+        <%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary' %><br>
 
-<ol>
-  <%= render @test.questions %>
-</ol>
+        <div class="col col-md-8 mt-3">
+          <ol>
+            <%= render @test.questions %>
+          </ol>
+          </div>
 
-<%= link_to t('.edit'), edit_admin_test_path(@test) %> |
-<%= link_to t('.back'), admin_tests_path %>
+        <div class="container mt-3" style="text-align: center">
+          <%= link_to t('.edit'), edit_admin_test_path(@test) %> |
+          <%= link_to t('.back'), admin_tests_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
