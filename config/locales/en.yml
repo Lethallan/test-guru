@@ -43,6 +43,9 @@ en:
       header: "You are passing"
       count_questions: "question out of"
       next: "Next"
+    gist:
+      success: 'Gist successfully saved'
+      failure: 'An error occured'
 
   admin:
     application:

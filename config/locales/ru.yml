@@ -45,6 +45,9 @@ ru:
       header: "Вы проходите тест"
       count_questions: "вопрос из"
       next: "Дальше"
+    gist:
+      success: 'Gist сохранён'
+      failure: 'Ошибка'
 
   admin:
     tests:

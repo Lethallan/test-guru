@@ -32,6 +32,10 @@ gem 'bootstrap', '~> 4.0'
 # AUTH
 gem 'devise', '~> 4.0'
 
+#NETWORKING
+gem 'faraday'
+gem "octokit", "~> 4.0"
+
 #LOCALIZATION
 gem 'rails-i18n'
 

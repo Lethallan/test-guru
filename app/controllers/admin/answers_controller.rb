@@ -24,7 +24,7 @@ class Admin::AnswersController < Admin::BaseController
 
   def update
     if @answer.update(answer_params)
-      redirect_to radmin_answer_path(@answer)
+      redirect_to admin_answer_path(@answer)
     else
       render :edit
     end
