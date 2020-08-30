@@ -83,6 +83,8 @@ ru:
       form:
         submit: "Готово"
 
+  gist_description: "Вопрос из теста на"
+
   tests_mailer:
     completed_test:
       subject: "Вы только что завершили тест на TestGuru!"

@@ -83,6 +83,9 @@ en:
       form:
         submit: "Ready"
 
+
+  gist_escription: "A question from test on:"
+
   tests_mailer:
     completed_test:
       subject: "You have just completed the TestGuru test!"
