@@ -1,5 +1,5 @@
 <tr>
   <td scope="row"><%= gist.user.email %></td>
   <td scope="row"><%= link_to truncate(gist.question.body, length: 25), admin_question_path(gist.question) %></td>
-  <td scope="row"><%= link_to gist.gist_url, target: :blank %></td>
+  <td scope="row"><%= link_to gist.gist_url, gist.gist_url, target: :blank %></td>
 </tr>

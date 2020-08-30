@@ -23,7 +23,8 @@ class TestPassagesController < ApplicationController
   end
 
   def gist
-    gist_result = GistQuestionService.new(@test_passage.current_question).call
+    gist_result = GistQuestionService.new(@test_passage.current_question)
+    gist_result.call
 
     if gist_result.success?
       current_user.gists.create(question: @test_passage.current_question, gist_url: gist_result.gist_url)
@@ -33,7 +34,7 @@ class TestPassagesController < ApplicationController
     end
 
     redirect_to @test_passage
-    flash_options
+    flash_options[:notice] || flash_options[:alert]
   end
 
   private

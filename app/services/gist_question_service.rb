@@ -13,6 +13,10 @@ class GistQuestionService
     @client.last_response.status == 201
   end
 
+  def gist_url
+    @client.last_response.data[:html_url]
+  end
+
   private
 
   def gist_params
