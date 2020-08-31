@@ -28,6 +28,7 @@ gem 'jbuilder', '~> 2.7'
 #UI
 gem 'jquery-rails'
 gem 'bootstrap', '~> 4.0'
+gem 'octicons_helper'
 
 # AUTH
 gem 'devise', '~> 4.0'
