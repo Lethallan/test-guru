@@ -43,6 +43,9 @@ en:
       header: "You are passing"
       count_questions: "question out of"
       next: "Next"
+    gist:
+      success: 'Gist successfully saved'
+      failure: 'An error occured'
 
   admin:
     application:
@@ -79,6 +82,9 @@ en:
         delete: "Delete"
       form:
         submit: "Ready"
+
+
+  gist_escription: "A question from test on:"
 
   tests_mailer:
     completed_test:
