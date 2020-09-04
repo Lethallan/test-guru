@@ -2,6 +2,8 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("utilities/sorting")
+require("utilities/confirm_password")
 
 import "bootstrap";
 import "../stylesheets/application"  // <- Add this line
