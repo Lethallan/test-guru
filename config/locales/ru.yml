@@ -82,6 +82,8 @@ ru:
         delete: "Удалить"
       form:
         submit: "Готово"
+      form_inline:
+        submit: "OK"
 
   gist_description: "Вопрос из теста на"
 
