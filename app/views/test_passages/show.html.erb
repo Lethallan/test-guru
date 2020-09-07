@@ -1,6 +1,15 @@
 <h2><%= t('.header') %> '<%= @test_passage.test.title %>'</h2>
 <%= @test_passage.test.questions.index(@test_passage.current_question) + 1 %> <%= t('.count_questions') %> <%= @count_questions %><br>
 
+<div class="progress">
+  <%= content_tag :div, '',
+                  class: 'progress progress-bar progress-bar-striped progress-bar-animated bg-info',
+                  id: 'test-progress',
+                  data: { question_number: @test_passage.test.questions.index(@test_passage.current_question) + 1,
+                          questions_count: @count_questions } %>
+</div>
+
+
 <b>
   <%= @test_passage.current_question.body %>
 </b>

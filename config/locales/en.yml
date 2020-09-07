@@ -82,6 +82,9 @@ en:
         delete: "Delete"
       form:
         submit: "Ready"
+      form_inline:
+        submit: "OK"
+
 
 
   gist_escription: "A question from test on:"

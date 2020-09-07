@@ -6,7 +6,7 @@ let control = document.getElementById('user_password_confirmation')
     if (controlPC) { controlPC.addEventListener('input', check) }
 });
 
-var check = function() {
+let check = function() {
   let password = document.getElementById('user_password').value
   let conf_password = document.getElementById('user_password_confirmation').value
   const checkIcon = document.querySelector('.octicon-check')
