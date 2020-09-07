@@ -5,6 +5,7 @@ require("channels")
 require("utilities/sorting")
 require("utilities/confirm_password")
 require("utilities/form_inline")
+require("utilities/progressbar")
 
 import "bootstrap";
 import "../stylesheets/application"  // <- Add this line
