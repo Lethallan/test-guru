@@ -8,6 +8,7 @@
   <span class="navbar-text">
     <% if user_signed_in? %>
       <%= link_to 'Список всех тестов', tests_path, class: 'btn' %> |
+      <%= link_to 'Написать нам', contact_forms_new_path, class: 'btn' %> |
       <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn' %>
     <% else %>
       <%= link_to 'Войти', new_user_session_path, class: 'btn' %> |

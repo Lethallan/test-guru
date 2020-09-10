@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'contact_forms/new'
+  get 'contact_forms/create'
   get 'gists/index'
   devise_for :users, path: :gurus, path_names: {sign_in: :login, sign_out: :logout}
 
@@ -14,6 +16,8 @@ Rails.application.routes.draw do
 
   # resources :users, only: :create
   # resources :sessions, only: :create
+
+  resources :contact_forms, only: %i[new create]
 
   resources :tests, only: :index do
     post :start, on: :member
