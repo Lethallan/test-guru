@@ -3,6 +3,7 @@
 
   <span class="navbar-text">
     <% if user_signed_in? %>
+      <%= link_to 'Your profile', users_show_path, class: 'btn' %> |
       <%= link_to 'All tests', admin_tests_path, class: 'btn' %> |
       <%= link_to 'New test', new_admin_test_path, class: 'btn' %> |
       <%= link_to 'User view', tests_path, class: 'btn' %> |

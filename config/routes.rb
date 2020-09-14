@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'users/index'
+  get 'users/show'
+  get 'user/index'
+  get 'user/show'
   get 'contact_forms/new'
   get 'contact_forms/create'
   get 'gists/index'
@@ -18,6 +22,8 @@ Rails.application.routes.draw do
   # resources :sessions, only: :create
 
   resources :contact_forms, only: %i[new create]
+
+  resources :users, only: %i[show]
 
   resources :tests, only: :index do
     post :start, on: :member
