@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  get 'badges/index'
   get 'users/index'
   get 'users/show'
   get 'user/index'
@@ -23,7 +24,9 @@ Rails.application.routes.draw do
 
   resources :contact_forms, only: %i[new create]
 
-  resources :users, only: %i[show]
+  resources :users, only: %i[show] do
+    resources :badges, shallow: true, only: %i[index]
+  end
 
   resources :tests, only: :index do
     post :start, on: :member

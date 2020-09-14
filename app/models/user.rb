@@ -18,6 +18,8 @@ class User < ApplicationRecord
   has_many :tests, through: :test_passages
   has_many :author_tests, class_name: 'Test', foreign_key: :user_id
   has_many :gists
+  has_many :userbadges
+  has_many :badges, through: :userbadges
 
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEXP }
 
