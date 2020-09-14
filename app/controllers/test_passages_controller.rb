@@ -46,4 +46,8 @@ class TestPassagesController < ApplicationController
   def count_questions
     @count_questions = @test_passage.test.questions.count
   end
+
+  # def excellent_test
+  #   @percentage == 100
+  # end
 end
