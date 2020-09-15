@@ -23,8 +23,6 @@ class User < ApplicationRecord
 
   validates :email, presence: true, uniqueness: true, format: { with: VALID_EMAIL_REGEXP }
 
-  # scope :first_try, -> { where(test_passages.length == 1) }
-
   def test_passage(test)
     test_passages.order(id: :desc).find_by(test_id: test.id)
   end
@@ -32,8 +30,4 @@ class User < ApplicationRecord
   def userbadge(badge)
     userbadges.order(id: :desc).find_by(badge_id: badge.id)
   end
-
-  # def first_try_badge
-  #   current_user.test_passages.length >= 1
-  # end
 end

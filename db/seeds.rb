@@ -92,3 +92,9 @@ Answer.create!(
     { body: 'Sauron', question_id: 12, correct: true }
   ]
 )
+
+Badge.create!([
+  { name: 'First try', description: 'Complete one test', image: 'Bronze medal'},
+  { name: 'All right', description: 'Complete a test without mistakes', image: 'Silver medal'},
+  { name: 'Maniac', description: 'Complete all available tests', image: 'Crazy face'}
+])
