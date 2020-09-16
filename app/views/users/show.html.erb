@@ -13,9 +13,24 @@
           <%= current_user.email %>
         </h6><br>
 
-        <h4 style="text-align: left">
-          badges here
-        </h4><br>
+         <% if @userbadges.present? %>
+          <h3 style="text-align: center">
+            Your achievements
+          </h3>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Achievement</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th></th>
+              </tr>
+            </thead>
+            <%= render @userbadges %>
+          </table>
+        <% else %>
+          <p> You don't have any achievements. </p>
+        <% end%>
 
         <% if @usertests.present? %>
           <h3 style="text-align: center">
