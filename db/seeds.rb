@@ -94,7 +94,15 @@ Answer.create!(
 )
 
 Badge.create!([
-  { name: 'First try', description: 'Complete one test', image: 'Bronze medal'},
-  { name: 'All right', description: 'Complete a test without mistakes', image: 'Silver medal'},
-  { name: 'Maniac', description: 'Complete all available tests', image: 'Crazy face'}
+  { name: 'First try',
+    description: 'Complete one test',
+    icon: File.new(Rails.root.join('app/assets/images', 'first_badge.png')) },
+
+  { name: 'All right',
+    description: 'Complete a test without mistakes',
+    icon: File.new(Rails.root.join('app/assets/images', 'second_badge.png')) },
+
+  { name: 'Maniac',
+    description: 'Complete all available tests',
+    icon: File.new(Rails.root.join('app/assets/images', 'third_badge.png')) }
 ])
