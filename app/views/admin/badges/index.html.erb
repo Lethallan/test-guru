@@ -1,0 +1,29 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-10">
+
+    <div class="card border-default">
+      <div class="card-body">
+
+       <% if @all_badges.present? %>
+          <h3 style="text-align: center">
+            All available achievements
+          </h3>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Achievement</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th></th>
+              </tr>
+            </thead>
+            <%= render @all_badges %>
+          </table>
+        <% else %>
+          <p> No badges </p>
+        <% end%>
+git
+      </div>
+    </div>
+  </div>
+</div >
