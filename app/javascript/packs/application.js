@@ -6,6 +6,7 @@ require("utilities/sorting")
 require("utilities/confirm_password")
 require("utilities/form_inline")
 require("utilities/progressbar")
+require("utilities/timer")
 
 import "bootstrap";
 import "../stylesheets/application"  // <- Add this line
