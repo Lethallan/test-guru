@@ -3,8 +3,10 @@
 
   <span class="navbar-text">
     <% if user_signed_in? %>
+      <%= link_to 'Ваш профиль', users_show_path, class: 'btn' %> |
       <%= link_to 'Список всех тестов', admin_tests_path, class: 'btn' %> |
       <%= link_to 'Создать новый тест', new_admin_test_path, class: 'btn' %> |
+      <%= link_to 'Все ачивки', admin_badges_path, class: 'btn' %> |
       <%= link_to 'Режим пользователя', tests_path, class: 'btn' %> |
       <%= link_to 'Показать Gist-файлы', admin_gists_path, class: 'btn' %> |
       <%= link_to 'Выйти', destroy_user_session_path, method: :delete, class: 'btn' %>

@@ -1,0 +1,58 @@
+<div class="row justify-content-center mt-3">
+  <div class="col col-md-10">
+
+    <div class="card border-default">
+      <div class="card-body">
+
+        <h2 style="text-align: center">
+          <%= current_user.first_name %>
+          <%= current_user.last_name%>
+        </h2>
+
+        <h6 style="text-align: center">
+          <%= current_user.email %>
+        </h6><br>
+
+         <% if @userbadges.present? %>
+          <h3 style="text-align: center">
+            Your achievements
+          </h3>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Achievement</th>
+                <th scope="col">Description</th>
+                <th scope="col">Image</th>
+                <th></th>
+              </tr>
+            </thead>
+            <%= render @userbadges %>
+          </table>
+        <% else %>
+          <p> You don't have any achievements. </p>
+        <% end%>
+
+        <% if @usertests.present? %>
+          <h3 style="text-align: center">
+            Passed tests
+          </h3>
+          <table class="table table-striped">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Level</th>
+                <th scope="col">Author</th>
+                <th scope="col">Correct answers</th>
+                <th></th>
+              </tr>
+            </thead>
+            <%= render @usertests %>
+          </table>
+        <% else %>
+          <p> You have not passed any tests yet. </p>
+        <% end%>
+
+      </div>
+    </div>
+  </div>
+</div>
