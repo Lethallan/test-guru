@@ -19,6 +19,7 @@ class Test < ApplicationRecord
                     uniqueness: true
 
   validates :level, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
+  validates :timer, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   validate :validate_max_level, on: :create
 

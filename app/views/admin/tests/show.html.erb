@@ -12,13 +12,18 @@
           <%= t('.count_questions') %>: <%= @test.questions.count %>
         </p><br>
 
+        <p>
+          <strong>Timer:</strong>
+          <%= @test.timer || '---' %>
+        </p>
+
         <%= link_to t('.new_question'), new_admin_test_question_path(@test), class: 'btn btn-primary' %><br>
 
         <div class="col col-md-8 mt-3">
           <ol>
             <%= render @test.questions %>
           </ol>
-          </div>
+        </div>
 
         <div class="container mt-3" style="text-align: center">
           <%= link_to t('.edit'), edit_admin_test_path(@test) %> |

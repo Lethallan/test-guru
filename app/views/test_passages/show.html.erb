@@ -1,6 +1,8 @@
 <h2><%= t('.header') %> '<%= @test_passage.test.title %>'</h2>
 <%= @test_passage.test.questions.index(@test_passage.current_question) + 1 %> <%= t('.count_questions') %> <%= @count_questions %><br>
 
+<%= render 'shared/timer' if @test_passage.test.timer %>
+
 <div class="progress">
   <%= content_tag :div, '',
                   class: 'progress progress-bar progress-bar-striped progress-bar-animated bg-info',

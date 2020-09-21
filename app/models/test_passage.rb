@@ -9,6 +9,16 @@ class TestPassage < ApplicationRecord
     current_question.nil?
   end
 
+  def spent_time
+    (Time.now - self.created_at).round 1
+  end
+
+  def time_is_up?
+    if self.test.timer
+      (Time.now - self.created_at) > self.test.timer
+    end
+  end
+
   def accept!(answer_ids)
     if correct_answer?(answer_ids)
       self.correct_questions += 1
